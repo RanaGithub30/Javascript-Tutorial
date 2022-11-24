@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Nested If Else</title>
+</head>
+<body>
+    <center><h1>Javascript Number Guessing Game</h1></center>
+    <button onclick="return game();">Start Game</button>
+    <p id="numb"></p>
+    <p id="numb1"></p>
+    <p id="result"></p>
+
+
+    <script>
+        /*
+               Here, I am creating a small guess game, user have to guess a number between 0 to 100, and a 
+               random number will generate automatically, if the user guess the correct number he is winner or 
+               he is looser. 
+        */
+
+        function game(){
+        var winner = Math.floor(Math.random() * 100, 0);
+        
+        var guessNumber = prompt("Guess a Number between 0 to 100 :"); // to take input from the user
+        document.getElementById('numb').innerHTML = "Your Guessed Number is: "+guessNumber;
+        document.getElementById('numb1').innerHTML = "Actual Number is: "+winner;
+
+        if(guessNumber > 100){
+            document.getElementById('result').innerHTML = "Your Guessed Number is too high, guess a number between 0 - 100";
+        }
+
+        else{
+           // nested if else..
+
+           if(guessNumber == winner){
+            document.getElementById('result').innerHTML = "Congrats! You Won the Game";
+           }else{
+            document.getElementById('result').innerHTML = "Sorry, You Lose the Game";
+           }
+        }
+    }
+
+    </script>
+</body>
+</html>

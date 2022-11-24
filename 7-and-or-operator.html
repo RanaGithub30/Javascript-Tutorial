@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <!-- And Operator -->
+
+<h1>JavaScript Comparison</h1>
+<h2>The && Operator (Logical AND)</h2>
+<p>The && operator returns true if both expressions are true, otherwise it returns false.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 6;
+let y = 3;
+
+document.getElementById("demo").innerHTML = 
+(x < 10 && y > 1) + "<br>" + 
+(x < 10 && y < 1);
+</script>
+
+<!-- Or Operator -->
+
+<h1>JavaScript Comparison</h1>
+<h2>The || Operator (Logical OR)</h2>
+<p>The || returns true if one or both expressions are true, otherwise it returns false.</p>
+
+<p id="demo1"></p>
+
+<script>
+let x1 = 6;
+let y1 = 3;
+
+document.getElementById("demo1").innerHTML = 
+(x1 == 5 || y1 == 5) + "<br>" + 
+(x1 == 6 || y1 == 0) + "<br>" + 
+(x1 == 0 || y1 == 3) + "<br>" + 
+(x1 == 6 || y1 == 3);
+</script>
+
+
+</body>
+</html>

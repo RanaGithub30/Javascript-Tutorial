@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Condition</title>
+</head>
+<body>
+    <center><h2>Javascript If, Elseif, Else</h2></center>
+    <p id="result"></p>
+
+    <script>
+        /*
+            Here, I am gettimg i/p from user about a number, if the number is 
+               1) > 0 i..e, o/p will be +ve, 
+               2) if, <0, output will be -ve
+               3) if, = 0, output will be equal
+               4) otherwise not valid
+        */
+
+        var input = prompt("Enter a Number");
+        if(input > 0){
+             document.getElementById('result').innerHTML = "The Given Number is a Positive Number";
+        }
+        else if(input < 0){
+            document.getElementById('result').innerHTML = "The Given Number is a Negative Number";
+        }
+        else if(input == 0){
+            document.getElementById('result').innerHTML = "The Given Number is Zero";
+        }
+        else{
+            document.getElementById('result').innerHTML = "The Input is Not Valid";
+        }
+
+    </script>
+</body>
+</html>

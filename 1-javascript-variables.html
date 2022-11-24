@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables</title>
+</head>
+<body>
+    <p id="javscript-var"></p>
+
+    <script>
+       // variable can store some info, to use that latter, value of hich can be changed latter..
+
+       /*
+             Declaration of Variable
+             ---------------------------------
+             
+             We can also declare variable without writting var keyword also, but that might be the cause of 
+             some error, to avoide this error, we can use "use strict" .
+
+             
+             
+             Use Strict
+             -----------------------------------
+
+             The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+             With strict mode, you can not, for example, use undeclared variables.
+
+       */
+
+        "use strict";
+
+        var first_name = "Java";
+        var last_name = "Script";
+
+       document.getElementById('javscript-var').innerHTML = first_name +" "+ last_name;
+    </script>
+
+</body>
+</html>

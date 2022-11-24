@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript String</title>
+</head>
+<body>
+    <center><h2><u> Javascript String Tutorial</u></h2></center>
+    <p id="string"></p>
+    <p id="length"></p>
+    <p id="last_charecter"></p>
+    <p id="second_last_charecter"></p>
+
+
+    <center><h2><u> Some Special Methods of Javascript String</u></h2></center>
+    <p id="trim_string"></p>
+    <p id="upper_case"></p>
+    <p id="lower_case"></p>
+    <p id="slice"></p>
+
+
+
+    <script>
+
+        // string declaration..
+
+        var string1 = "This is a javascript String";
+        document.getElementById('string').innerHTML = "The Declared String is : "+string1;
+
+        // find length of string..
+        document.getElementById('length').innerHTML = "Length of the String is : "+string1.length;
+
+        // to find the last charecter of the string 
+        document.getElementById('last_charecter').innerHTML = "Last Charecter the String is : "+string1[string1.length-1];
+
+        // to find the second last charecter of the string 
+        document.getElementById('second_last_charecter').innerHTML = "Last Charecter the String is : "+string1[string1.length-2];
+
+        /*
+             Some special methods of string.. 
+             --------------------------------------
+             
+             1) The trim() method removes whitespace from both sides of a string
+             2) slice() extracts a part of a string and returns the extracted part in a new string.
+
+        */
+
+        // Removeing the space from string..
+        var string2 = "       This is a javascript String    ";
+        document.getElementById('trim_string').innerHTML = "After Triming the String is : "+string2.trim();
+
+        // to print the charecter in capital letter..
+        document.getElementById('upper_case').innerHTML = "Upper Case of the String is : "+string1.toUpperCase();
+
+        // to print the charecter in lower letter..
+        document.getElementById('lower_case').innerHTML = "Lower Case of the String is : "+string1.toLowerCase();
+
+        // Slicing a part, for example from 7th to 19th charecter of the string..
+        document.getElementById('slice').innerHTML = "Sliceing of the String from 7th to 19th charecter is : "+string1.slice(7, 20);
+
+
+    </script>
+
+    
+</body>
+</html>

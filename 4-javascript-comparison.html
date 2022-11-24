@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Comparison Operator</title>
+</head>
+<body>
+    <script>
+        /*
+             Booleans operattor, o/p will be in true/false
+        */
+
+        var num1= 5;
+        var num2 = 7;
+
+        console.log(num1 > num2); // o/p-> false
+        console.log(num1 == num2); // false
+        console.log(num1 < num2); // true
+
+        /*
+             = vs == vs ===
+             -------------------------------
+
+             1) = is an assignment operator, which sets the variable on the left of the = to the value of the 
+                  expression that is on its right.
+
+             2) == is a comparison operator, which transforms the operands having the same type before comparison.
+             3) === is a strict equality comparison operator in JavaScript, which returns false for the values which are not of a similar type.
+
+        */
+
+        var comp1 = 25; // assignment of variable;
+        var comp2 = "25"; 
+
+        console.log(comp1 == comp2); // op --> true // it checks the value of variable not the data type
+        console.log(comp1 === comp2); // op --> false // it checks value & data type also.
+
+    </script>
+</body>
+</html>

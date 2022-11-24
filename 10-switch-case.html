@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Switch Case</title>
+</head>
+<body>
+    <center><h1>Javascript Switch Case</h1></center>
+    <p id="result"></p>
+
+    <script>
+        /*
+              Here, I am getting i/p from user, from number 0-6,
+              0 will be consider as sunday, 1 as Monday and so on,
+              if user give any i/p rather than 0-6 output will be invalid input
+        */
+
+       var day = prompt("Enter a number between 0 to 6"); // given input is in string..
+       var input = +day; // converted the string into number
+
+       switch(input){
+           case 0:
+             document.getElementById('result').innerHTML = "Today is Sunday";
+             break;
+            case 1:
+             document.getElementById('result').innerHTML = "Today is Monday";
+             break;
+            case 2:
+             document.getElementById('result').innerHTML = "Today is Tuesday";
+             break;
+            case 3:
+             document.getElementById('result').innerHTML = "Today is Wednesday";
+             break;
+            case 4:
+             document.getElementById('result').innerHTML = "Today is Thursday";
+             break;
+            case 5:
+             document.getElementById('result').innerHTML = "Today is Friday";
+             break;
+            case 6:
+             document.getElementById('result').innerHTML = "Today is Saturday";
+             break;
+            default:
+             document.getElementById('result').innerHTML = "Input is Invalid";
+
+       }
+
+    </script>
+</body>
+</html>
