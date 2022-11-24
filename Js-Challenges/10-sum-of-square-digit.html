@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*
+            Create a function that find sum of squares of every digit of a number.
+
+            Example: -
+
+                squareDigits(123) ➞ (1^2 + 2^2 + 3^2) = 14
+                squareDigits(24) ➞ (2^2+4^2) = 20
+                squareDigits(3212) ➞ (3^2+2^2+1^2+2^2) = 18
+        */
+
+
+            let num = 428;
+            let digits = num.toString().split(' ');
+            let realDigits = digits.map(Number);
+            let result = 0;
+
+            for(var i=0; i<realDigits.length; i++){
+                result = result + ((realDigits[i] * realDigits[i]));
+            }
+            console.log(result);
+    </script>
+</body>
+</html>

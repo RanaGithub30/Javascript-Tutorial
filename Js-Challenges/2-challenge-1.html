@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         Question - Write a program which returns the number of true values there are in an array.
+        arrayCount([true, false, false, true, false]) ➞ 2
+        arrayCount([false, false, false, false]) ➞ 0
+        arrayCount([]) ➞ 0
+
+        ------------------------------------------------------------------------------------
+        */
+
+        // Solution - 1..
+
+        const arr = [true, false, false, false, true];
+        const count = arr.filter(Boolean).length; // The `.filter(Boolean)` just removes values from a list which are "falsey", like empty strings or null.
+
+        console.log(count);
+
+        // Solution - 2.......
+
+        function arrayCount(arr) {
+        let result = [];
+        for(let i = 0; i < arr.length; i++) {
+            if (arr[i] === true) {
+                result.push(arr[i]);
+            }
+        }
+        return result.length;
+        }
+
+        console.log(arrayCount([false,false,true,false,true]));
+
+        // Solution - 3........
+
+        function arrayCount(arr) {
+            let count = 0;
+            for(let element of arr) if(element===true) count++;
+            return count;
+        }
+
+        console.log(arrayCount([false,false,true,false,true]))
+    </script>
+</body>
+</html>

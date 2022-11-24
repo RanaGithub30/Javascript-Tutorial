@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age to Day Conversion</title>
+</head>
+<body>
+    <script>
+        /*
+              Write a program to convert Age to Days (Considering Leap Years)
+        */
+
+        function days(birth_year, current_year){
+        let age;
+        let leap_years = 0;
+        let days;
+
+        if(birth_year<current_year){
+            age = (current_year - birth_year);
+
+        if(age<=100){
+            for(var i=birth_year; i<current_year; i++){
+                if(i%4 ==0 || i%400 ==0){
+                    leap_years++;
+                }
+            }
+            leap_years;
+            let non_leap_years = (age - leap_years);
+
+            days = ((non_leap_years*365)+(leap_years*366));
+            console.log(days);
+        }else{
+            console.log("Please Enter valid value");
+        }
+        }
+        else{
+                console.log("Please Enter Correct value");
+        }
+        }
+        return days(1992, 2021);
+    </script>
+</body>
+</html>

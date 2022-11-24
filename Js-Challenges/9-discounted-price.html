@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discounted Price</title>
+</head>
+<body>
+    <script>
+         /*
+             Create a function that takes two arguments: the original price and the discount percentage as 
+             integers and returns the final price after the discount.
+        */
+
+        let original_price;
+        let discount;
+        let result;
+
+        function discountedPrice(price, disc){
+            if(disc<100){
+                result = ((price)*((100 - disc)))/100;
+            }else{
+                result = "Please Enter valid value";
+            }
+            console.log(result);
+        }
+        discountedPrice(2000, 25);
+    </script>
+</body>
+</html>

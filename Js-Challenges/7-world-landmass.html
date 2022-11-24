@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Landmass</title>
+</head>
+<body>
+    <script>
+        /*
+               Create a function that takes a country's name and its area as arguments and returns the area 
+               of the country's proportion of the total world's landmass.
+        */
+
+        let world_land = 148940000;  // (in KM. square)
+
+        function areaOfLand(country, area){
+            let country_area = ((area/world_land)*100).toFixed(2);
+            let result = "Area of "+country+" is "+country_area+" % of the total Land Mass";
+            console.log(result);
+        }
+        areaOfLand("India", 2973190);
+    </script>
+</body>
+</html>

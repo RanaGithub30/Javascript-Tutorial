@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Write a program which removes 0 from prefix but not suffix..
+            e.g., - if, i/p - 300, (o/p - 300)
+            if, i/p - 003, (o/p - 3)
+        */
+
+        let original_num;
+        let result;
+
+        function removeZeros(number){
+            if(number%10 == 0){
+                result = original_num;
+            }else{
+                result = (number%10);
+            }
+            console.log(result);
+        }
+        original_num = '009';
+        removeZeros(original_num);
+    </script>
+</body>
+</html>

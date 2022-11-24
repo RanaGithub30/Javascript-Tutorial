@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*
+
+            Write a program to find distance between two places. 
+            The Latitude and Longitude of two places will be given.
+            */
+
+            function findDistance(curr_lat, curr_long, dest_lat, dest_long){
+
+            // Current Latitude & Longitude in Radians..
+            let lat1_red = curr_lat * (Math.PI/180);
+            let long1_red = curr_long * (Math.PI/180);
+
+            // Current Latitude & Longitude in Radians..
+            let lat2_red = dest_lat * (Math.PI/180);
+            let long2_red = dest_long * (Math.PI/180);
+
+            // Find Distance..
+            let dlon = long2_red - long1_red; // Distance bet. two Longitudes..
+            let dlat = lat2_red - lat1_red; // Distance between two Latitude..
+
+            let a = Math.pow(Math.sin(dlat/2), 2)
+                        + Math.cos(lat1_red) * Math.cos(lat2_red)
+                        * Math.pow(Math.sin(dlon/2),2);
+            let distance = 2 * Math.asin(Math.sqrt(a));
+
+            // FInd Distance in KM..
+
+            let distance_in_km = 6378 * distance;
+            console.log("Distance between two places is : "+distance_in_km);
+
+            }
+
+            let start_latitude = 22.8384;
+            let start_logitude = 88.6196;
+            let destination_latitude = 22.5678;
+            let destination_logitude = 88.3710;
+
+            findDistance(start_latitude, start_logitude, destination_latitude, destination_logitude);
+    </script>
+</body>
+</html>
