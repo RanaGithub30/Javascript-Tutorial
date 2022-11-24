@@ -1,0 +1,29 @@
+Gitlab/Github Details
+---------------------------------
+
+user name:  rana_saha_personal_30
+email: ranasaha03edu@gmail.com
+p/d:  T7pLiwt8F#50
+
+--------------------------------------------------------------------------
+
+Git Commands
+------------------------
+
+1) For Installition/Initialization --> git init
+2) For changing Files (*) --> git add .
+3) For Commit Message.. --> git commit -m "commit-message"
+4) For First Time --> git config --global user.email "you@example.com"
+5) For First Time --> git config --global user.name "Your Name"
+6) For Linking the project with git --> git remote add origin https://github.com/RanaGithub30/Laravel-WebScrapping.git (For first time in new project)
+7) For creating Main Branch --> git branch -M main (For first Time)
+8) For pushing the project for first time --> git push -u origin main
+
+
+////////////////////
+
+9) For push the project --> git add .
+10) For Commit Message.. --> git commit -m "commit-message"
+11) For pushing the project for first time --> git push
+
+ 
