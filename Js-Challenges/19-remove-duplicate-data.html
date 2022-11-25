@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Find Unique Value from Array in JavaScript
+        */
+
+         // Process - 1.........
+
+        let array_1 = ["A", "C", "B", "B", "G", "D", "A", "R", "C", "M", "D", "A", "R", "C", "B", "D"];
+
+        function removeDuplicate(data){
+        let unique = [];
+        data.forEach(element => {
+            if(!unique.includes(element)){
+                unique.push(element);
+            }
+        });
+        return unique;
+        }
+        console.log(removeDuplicate(array_1));
+
+
+
+        // Process - 2..................
+
+        let array_2 = ["A", "C", "B", "B", "G", "D", "A", "R", "C", "M", "D", "A", "R", "C", "B", "D"];
+
+        function removeDuplicate(data){
+        return [...new Set(data)];
+        }
+        console.log(removeDuplicate(array_2));
+    </script>
+</body>
+</html>

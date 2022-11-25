@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+               Find Median of Values from Array in JavaScript
+        */
+
+        let array_1 = [12, 8, 7, 90, 35, 98, 100, 25];
+        let median;
+
+            if(array_1.length %2 == 0){
+                let array_index = (array_1.length/2);
+                let new_array_index = (array_index - 1);
+                median = ((array_1[array_index] + array_1[new_array_index])/2);
+            }else{
+                let array_index = ((array_1.length - 1)/2);
+                median = array_1[array_index];
+            }
+        console.log(median);
+    </script>
+</body>
+</html>

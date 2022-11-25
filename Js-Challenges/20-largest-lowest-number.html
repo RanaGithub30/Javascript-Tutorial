@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+              Largest and Lowest Number of the Array using JavaScript
+        */
+
+
+         let array_1 = [7, 9, 3, 2, 0, 10, 90, 21, 12, 87, 11, 22, 8];
+        let array_2 = [7, 9, 3, 2, 0, 10, 90, 21, 12, 87, 11, 22, 8, 4, 1, 0];
+    
+        let largest_number = array_1[0];
+        let lowest_number = array_2[0];
+
+        // loop to find largest number of the array..
+        for(var i=0; i<array_1.length; i++){
+                if(largest_number<array_1[i]){
+                    largest_number = array_1[i];
+                }
+        }
+
+        // loop to find lowest number of the array..
+
+        for(var k=0; k<array_2.length; k++){
+                if(lowest_number > array_2[k]){
+                    lowest_number = array_2[k];
+                }
+        }    
+
+        console.log(largest_number);
+        console.log(lowest_number);
+    </script>
+</body>
+</html>
