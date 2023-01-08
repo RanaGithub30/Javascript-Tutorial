@@ -7,6 +7,7 @@
     <title>Javascript String</title>
 </head>
 <body>
+
     <center><h2><u> Javascript String Tutorial</u></h2></center>
     <p id="string"></p>
     <p id="length"></p>
@@ -19,6 +20,11 @@
     <p id="upper_case"></p>
     <p id="lower_case"></p>
     <p id="slice"></p>
+
+
+    <p id="search"></p>
+    <p id="startswith"></p>
+
 
 
 
@@ -59,6 +65,23 @@
 
         // Slicing a part, for example from 7th to 19th charecter of the string..
         document.getElementById('slice').innerHTML = "Sliceing of the String from 7th to 19th charecter is : "+string1.slice(7, 20);
+
+
+        /*
+                 Javascript Search
+        */
+
+        var text = "Please locate where 'locate' occurs!";
+        document.getElementById('search').innerHTML = "The position of the first occurrence of 'locate' is: "+text.indexOf("locate");
+
+        //  indexOf() return -1 if the text is not found.
+
+        /*
+             Strings Strats With         
+        */
+ 
+        var text2 = "Hello world, welcome to the universe.";
+        document.getElementById("startswith").innerHTML = "Check if a string starts with 'Hello': "+text2.startsWith("Hello");
 
 
     </script>
