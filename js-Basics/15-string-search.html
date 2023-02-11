@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="indexof"></p>
+    <p id="lastindexof"></p>
+    <p id="search"></p>
+
+    <script>
+        /*
+             The indexOf() method returns the index of (position of) the first occurrence of a string in a string 
+        */
+
+        let text = "Please locate where 'locate' occurs!";
+        document.getElementById("indexof").innerHTML = "The position of the first occurrence of 'locate' is : " + text.indexOf("locate");
+    
+         /*
+              1) The lastIndexOf() method returns the index of the last occurrence of a specified text in a string
+              2) Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+         */
+
+         let text2 = "Please locate where 'locate' occurs!";
+         document.getElementById("lastindexof").innerHTML = "Return the position of the last occurrence of a specified text : " + text2.lastIndexOf("locate");
+
+        /*
+             The search() method searches a string for a string and returns the position of the match
+        */
+
+        let text3 = "Please locate where 'locate' occurs!";
+        document.getElementById("search").innerHTML = "Return the position of the first occurrence of a string in a string : " + text.search("locate");
+
+
+    </script>
+</body>
+</html>
