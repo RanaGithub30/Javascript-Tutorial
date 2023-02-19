@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+          /*
+                   Create a function that will return an integer number corresponding to the amount of digits 
+                   in the given integer num.
+                   
+                   Sample O/P - 
+                   ------------------
+
+                    num_of_digits(1000) ➞ 4
+                    num_of_digits(12) ➞ 2
+                    num_of_digits(1305981031) ➞ 10
+                    num_of_digits(0) ➞ 1
+
+          */
+
+          function num_of_digits(num){
+                 num = num.toString().length;
+                 return num;
+          }
+
+          let result = num_of_digits(1000);
+          alert(result);
+    </script>
+
+</body>
+</html>
