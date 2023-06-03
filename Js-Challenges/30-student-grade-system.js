@@ -30,7 +30,7 @@ function gradingStudents(grades) {
              new_str = grades;
         }
     }else{
-            new_str = $grades;
+            new_str = grades;
     }
     
     return new_str;
