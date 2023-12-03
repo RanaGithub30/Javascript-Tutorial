@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Q) Write a program that prints a staircase of size .
+
+               i/p - 6
+
+               o/p - 
+                                 #
+                                ##
+                               ###
+                              ####
+                             #####
+                            ######
+        */
+
+        function staircase(n) {
+            for (let i = 1; i <= n; i++) {
+                let spaces = ' '.repeat(n - i); // Add spaces before the hashes
+                let hashes = '#'.repeat(i); // Add the hashes
+                console.log(spaces + hashes);
+            }
+       }
+
+        staircase(6);
+    </script>
+</body>
+</html>
