@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+              Given an array of bird sightings where every element represents a bird type id, determine the id of the most frequently 
+              sighted type. If more than 1 type has been spotted that maximum amount, return the smallest of their ids.
+
+              Example:
+
+              arr = [1,1,2,2,3]
+
+              There are two each of types 1 and 2, and one sighting of type 3. Pick the lower of the two types seen twice: type 1.
+
+              Example 2: arr = [1,4,4,4,5,3] o/p - 4
+              Example 3: arr = [1,4,2,3,2,3] o/p - 2
+        */
+
+
+        
+        // Define the migratoryBird function
+        function migratoryBird(arr) {
+            // Initialize an empty object to store bird type counts
+            let counts = {};
+
+            // Count occurrences of each bird type
+            arr.forEach(bird => {
+                // Increment count of the current bird type
+                counts[bird] = (counts[bird] || 0) + 1;
+            });
+
+            // Find the maximum count among all bird types
+            let maxCount = 0;
+            for (let birdType in counts) {
+                maxCount = Math.max(maxCount, counts[birdType]);
+            }
+
+            // Initialize an empty object to store bird types with maximum count
+            let result = {};
+            // Iterate through the counts object to find bird types with maximum count
+            for (let birdType in counts) {
+                // If the count of the current bird type equals the maximum count
+                if (counts[birdType] === maxCount) {
+                    // Add the bird type and its count to the result object
+                    result[birdType] = maxCount;
+                }
+            }
+
+            // Initialize smallestNumber to Infinity to find the smallest bird type number
+            let smallestNumber = Infinity;
+            // Iterate through the result object to find the smallest bird type number
+            for (let birdType in result) {
+                // Update smallestNumber if the current bird type number is smaller
+                smallestNumber = Math.min(smallestNumber, parseInt(birdType));
+            }
+
+            // Return the smallest bird type number among bird types with maximum counts
+            return smallestNumber;
+        }
+
+        // Invoke the migratoryBird function with the provided array
+        var result = migratoryBird([1, 1, 2, 3, 3]);
+        // Output the result to the console
+        console.log(result); // Output: 1
+
+    </script>
+</body>
+</html>

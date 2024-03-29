@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Marie invented a Time Machine and wants to test it by time-traveling to visit Russia on the Day of the Programmer 
+            (the 256th day of the year) during a year in the inclusive range from 1700 to 2700.
+
+            Given a year, y, find the date of the 256th day of that year according to the official Russian calendar during that year. 
+            Then print it in the format dd.mm.yyyy, where dd is the two-digit day, mm is the two-digit month, and yyyy is y.
+
+            For example, the given  = 1984. 1984 is divisible by 4, so it is a leap year. 
+            The 256th day of a leap year after 1918 is September 12, so the answer is 12.09.1984.
+        */
+
+
+        function dayOfProgrammer(year) {
+            let type;
+            
+            // Write your code here
+            if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+                type = "L";
+            }
+            else{
+                type = "NL";
+            }
+            
+            let progDay = 256;
+            let day = 0;
+            let remDate = 0;
+            let monthIndex = 0;
+            let result = "";
+            
+            let dayOfMonths1 = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            let dayOfMonths2 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            
+            let dayOfMonths = (type === "L") ? dayOfMonths1 : dayOfMonths2;
+            
+            for(let i=0;i<dayOfMonths.length;i++){
+                day += dayOfMonths[i];
+                
+                if(day > progDay){
+                    monthIndex = i+1;
+                    remDate = dayOfMonths[i] - (day - progDay);
+                    break;
+                }
+            }
+            
+            result = remDate.toString().padStart(2, '0') + '.' +
+                    monthIndex.toString().padStart(2, '0') + '.' +
+                    year.toString();
+            return result;
+        }
+
+        var result = dayOfProgrammer(1800);
+        console.log(result);
+    </script>
+</body>
+</html>
