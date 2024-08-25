@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+                Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly 
+                four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated 
+                long integers.
+        */
+
+            function miniMaxSum(arr) {
+                let smallestNumbers = [];
+                let largestNumbers = [];
+                let smallSum = 0;
+                let largeSum = 0;
+                let res = 0;
+                
+                for(let i=0; i<arr.length; i++){
+                    for(let j=0; j<(arr.length); j++){
+                        if(arr[i] < arr[j]){
+                            smallestNumbers.push(arr[i]);
+                            break;
+                        }
+                    }
+                    
+                    for(let k=0; k<(arr.length); k++){
+                        if(arr[i] > arr[k]){
+                            largestNumbers.push(arr[i]);
+                            break;
+                        }
+                    }
+                    
+                    for(let n=i+1; n<arr.length; n++){
+                        if(arr[i] == arr[n]){
+                            largestNumbers.push(arr[n]);
+                            smallestNumbers.push(arr[n]);
+                            break;
+                        }
+                    }
+                }
+                
+                // find sum of all numbers
+                for(let l=0; l<smallestNumbers.length;l++){
+                    smallSum = smallSum + smallestNumbers[l];
+                }
+                
+                for(let m=0; m<largestNumbers.length;m++){
+                    largeSum = largeSum + largestNumbers[m];
+                }
+                
+                console.log(`${smallSum} ${largeSum}`);
+            }
+
+            miniMaxSum([5,5,5,5,5]); // 20 20
+            miniMaxSum([1,2,3,4,5]); // 10 14
+    </script>
+</body>
+</html>

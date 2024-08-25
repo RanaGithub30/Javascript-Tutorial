@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+             Anagram Check: Write a function to check if two strings are anagrams of each other.
+
+             [
+                Two strings are said to be anagram if we can form one string by arranging the characters of another string. 
+                For example, Race and Care. Here, we can form Race by arranging the characters of Care.
+             ]
+        */
+
+        function anagram(str1, str2){
+            let strLen1 = str1.length; // 4
+            let strLen2 = str2.length; // 4
+            let wordTotal = 0;
+            let res = "";
+            
+            if(strLen1 != strLen2){
+                res = "Not Anagram";     
+            }
+            else{
+                for(let i=0;i<strLen1;i++){
+
+                    // check if all charecter's are same in both string
+                    if (str2.includes(str1[i]) == true) {
+                            wordTotal++;
+                    }
+
+                }
+                
+                if(wordTotal == strLen1){
+                    res = "Anagram";
+                }
+                else{
+                    res = "Not Anagram";
+                }
+            }
+            
+            return res;
+        }
+
+        console.log(anagram("listen", "silent")); // Outputs: Anagram
+        console.log(anagram("triangle", "integral")); // Outputs: Anagram
+        console.log(anagram("apple", "pale")); // Outputs: Not Anagram
+        console.log(anagram("aabbcc", "abcabc")); // Outputs: Anagram
+        console.log(anagram("aabb", "abab")); // Outputs: Anagram
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Palindrome Check: Write a function to determine if a given string is a palindrome or not.
+        */
+
+
+        function palindrom(str){
+            let strRev = "";
+            let revWord = []; // give revers string
+            let res;
+            
+            for(let i=(str.length - 1);i>=0;i--){
+                revWord.push(str[i]);
+            }
+            
+            strRev = revWord.join("");
+            
+            if(str == strRev){
+                res = "Palindrom";
+            }
+            else{
+                res = "Not Palindrom";
+            }
+            return res;
+        }
+
+        let res = palindrom("madam");
+        console.log(res);
+    </script>
+</body>
+</html>
